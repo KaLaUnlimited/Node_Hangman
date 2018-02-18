@@ -1,35 +1,65 @@
 
+var WordBank = require("./WordBank.js")
 
-function Letter(word){
+var Word = require("./word.js");
 
 
-	this.displayUnderscores=function(){
+ //var hangman = new WordBank;
+
+
+function Letter(){
+
+
+	this.displayUnderscores=function(word){
 		var blank="";
-		for(var i =0; i<word.length;i++){
+	 	for(var i =0; i<word.length-1;i++){
 
-		blank+="_";
+	 	blank+="__ "
 	    
-	}
+	 }
+	console.log(blank)
 
-	this.letterChecker=function(letter){
+	// this.letterChecker=function(letter){
 
-		var (for i=0; i<word.lenght;i++){
+	// 	var (for i=0; i<word.lenght;i++){
 
-			if(letter===word.charAt(i)){
-				console.log("Correct!")
-			}else{
+	// 		if(letter===word.charAt(i)){
+	// 			console.log("Correct!")
+	// 		}else{
 
-				console.log("No ")
-			}
-		}
-	}
+	// 			console.log("No ")
+	// 		}
+	// 	}
+	// }
 
 }
 
 }
+var alpha = new Letter;
 
 
-function counter(){
 
-	
-}
+
+ var hangman = new WordBank;
+
+
+
+
+
+
+
+
+
+hangman.print();
+var currentWord =hangman.wordSelector();
+
+alpha.displayUnderscores(currentWord);
+
+console.log(" current:" + currentWord);
+
+// function counter(){
+
+
+// }
+
+module.exports=Letter;
